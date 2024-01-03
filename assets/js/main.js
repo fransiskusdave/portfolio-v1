@@ -21,3 +21,11 @@ navLink.forEach((item) => {
     navMenu.classList.remove("show-menu");
   });
 });
+
+// Shadow Header
+window.addEventListener("scroll", () => {
+  const header = document.getElementById("header");
+  window.scrollY >= 50
+    ? header.classList.add("shadow-header")
+    : header.classList.remove("shadow-header");
+});
