@@ -149,3 +149,141 @@ img {
 .main {
   overflow: hidden;
 }
+
+/* Navbar */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--body-color);
+  transition: box-shadow 0.4s;
+  z-index: var(--z-fixed);
+}
+
+.nav {
+  position: relative;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  display: flex;
+  font-weight: var(--font-semi-bold);
+  align-items: center;
+  column-gap: 0.5rem;
+  color: var(--title-color);
+}
+
+.nav__logo-circle,
+.nav__toggle {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+.nav__logo-circle {
+  border-radius: 50%;
+}
+
+.nav__toggle {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+/* Mobile Devices */
+@media (max-width: 1150px) {
+  .nav__menu {
+    position: fixed;
+    top: -100%;
+    right: 10px;
+    background-color: hsla(0, 0%, 0%, 0.75);
+    width: 40%;
+    padding-block: 1.8rem 5rem;
+    backdrop-filter: blur(8px);
+    transition: top 0.4s;
+    text-align: center;
+  }
+}
+
+.nav__title,
+.nav__name,
+.nav__close {
+  color: var(--white-color);
+}
+
+.nav__title {
+  display: block;
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 3.5rem;
+}
+
+.nav__name {
+  position: relative;
+  width: max-content;
+  margin: 0 auto 3rem;
+  font-size: var(--h2-font-size);
+}
+
+.nav__name::after,
+.nav__name::before {
+  content: "";
+  width: 20px;
+  background-color: var(--text-color-light);
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: -2rem;
+}
+
+.nav__name::before {
+  left: initial;
+  right: -2rem;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+}
+
+.nav__link {
+  position: relative;
+  color: var(--text-color-light);
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
+  transition: color 0.3s;
+}
+
+.nav__link::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--white-color);
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  transition: width 0.3s;
+}
+
+.nav__link:hover {
+  color: var(--white-color);
+}
+
+.nav__link:hover::after {
+  width: 25%;
+}
+
+.nav__close {
+  position: absolute;
+  font-size: 1.2rem;
+  cursor: pointer;
+  top: 1rem;
+  right: 1.5rem;
+}
