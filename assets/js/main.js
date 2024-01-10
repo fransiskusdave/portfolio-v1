@@ -67,3 +67,23 @@ window.addEventListener("scroll", () => {
     ? scrollUp.classList.add("show-scroll")
     : scrollUp.classList.remove("show-scroll");
 });
+
+// Scroll Sections Active Link
+const sections = document.querySelectorAll("section[id]");
+
+window.addEventListener("scroll", () => {
+  const scrollDown = window.scrollY;
+
+  sections.forEach((section) => {
+    const sectionHeight = section.offsetHeight,
+      sectionTop = section.offsetTop - 58,
+      sectionId = section.getAttribute("id"),
+      sectionsClass = document.querySelector(
+        ".nav__menu a[href*=" + sectionId + "]"
+      );
+
+    scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight
+      ? sectionsClass.classList.add("active-link")
+      : sectionsClass.classList.remove("active-link");
+  });
+});

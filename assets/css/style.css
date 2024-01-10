@@ -300,6 +300,15 @@ img {
   box-shadow: 0 1px 16px hsla(0, 0%, 0%, 0.12);
 }
 
+/* Active Link */
+.active-link {
+  color: var(--white-color);
+}
+
+.active-link::after {
+  width: 25%;
+}
+
 /* Home */
 .home__container {
   padding-top: 2rem;
