@@ -59,3 +59,11 @@ contactForm.addEventListener("submit", (e) => {
       }
     );
 });
+
+// Scroll Up
+window.addEventListener("scroll", () => {
+  const scrollUp = document.getElementById("scroll-up");
+  window.scrollY >= 350
+    ? scrollUp.classList.add("show-scroll")
+    : scrollUp.classList.remove("show-scroll");
+});
