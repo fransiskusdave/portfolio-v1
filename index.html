@@ -11,6 +11,12 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- Remix Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.1/remixicon.css"
+    />
+
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
@@ -23,7 +29,7 @@
           <span class="nav__logo-name">Fransiskus Dave</span>
         </a>
 
-        <section class="nav__menu" id="nav-menu">
+        <div class="nav__menu" id="nav-menu">
           <span class="nav__title">Menu</span>
           <h3 class="nav__name">Dave</h3>
           <ul class="nav__list">
@@ -33,6 +39,10 @@
 
             <li class="nav__item">
               <a href="#about" class="nav__link">About Me</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#services" class="nav__link">Services</a>
             </li>
 
             <li class="nav__item">
@@ -47,9 +57,12 @@
           <div class="nav__close" id="nav-close">
             <i class="fa-solid fa-xmark"></i>
           </div>
-        </section>
+        </div>
 
         <section class="nav__buttons">
+          <!-- Dark Mode -->
+          <i class="ri-moon-fill change-theme" id="theme-button"></i>
+
           <div class="nav__toggle" id="nav-toggle">
             <i class="fa-solid fa-bars"></i>
           </div>
@@ -182,7 +195,7 @@
       <!-- About Section End -->
 
       <!-- Services Section Start -->
-      <section class="services section">
+      <section class="services section" id="services">
         <h2 class="section__title-2">
           <span>Services.</span>
         </h2>
@@ -691,7 +704,7 @@
     <!-- Footer Section End -->
 
     <!-- Scroll Up Start -->
-    <a href="" class="scrollup" id="scroll-up">
+    <a href="#home" class="scrollup" id="scroll-up">
       <i class="fa-solid fa-angles-up"></i>
     </a>
     <!-- Scroll Up End -->
