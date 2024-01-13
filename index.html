@@ -50,7 +50,9 @@
             </li>
 
             <li class="nav__item">
-              <a href="#contact" class="nav__link">Contact Me</a>
+              <a href="#contact" class="nav__link nav__link-button"
+                >Contact Me</a
+              >
             </li>
           </ul>
 
@@ -602,35 +604,35 @@
                     >Email Address</label
                   >
                 </div>
-
-                <div class="contact__box">
-                  <input
-                    type="text"
-                    name="user_subject"
-                    class="contact__input"
-                    id="subject"
-                    required
-                    placeholder="Subject"
-                  />
-                  <label for="subject" class="contact__label">Subject</label>
-                </div>
-
-                <div class="contact__box contact__area">
-                  <textarea
-                    name="user_message"
-                    id="message"
-                    class="contact__input"
-                    required
-                    placeholder="Message"
-                  ></textarea>
-                  <label for="message" class="contact__label">Message</label>
-                </div>
-
-                <p class="contact__message" id="contact-message"></p>
-                <button type="submit" class="contact__button button">
-                  <i class="fa-regular fa-envelope"></i> Send Message
-                </button>
               </div>
+
+              <div class="contact__box">
+                <input
+                  type="text"
+                  name="user_subject"
+                  class="contact__input"
+                  id="subject"
+                  required
+                  placeholder="Subject"
+                />
+                <label for="subject" class="contact__label">Subject</label>
+              </div>
+
+              <div class="contact__box contact__area">
+                <textarea
+                  name="user_message"
+                  id="message"
+                  class="contact__input"
+                  required
+                  placeholder="Message"
+                ></textarea>
+                <label for="message" class="contact__label">Message</label>
+              </div>
+
+              <p class="contact__message" id="contact-message"></p>
+              <button type="submit" class="contact__button button">
+                <i class="fa-regular fa-envelope"></i> Send Message
+              </button>
             </form>
           </div>
 
@@ -714,6 +716,9 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
+
+    <!-- Scroll Reveal -->
+    <script src="assets/js/scrollreveal.min.js"></script>
 
     <!-- Main Js -->
     <script src="assets/js/main.js"></script>
